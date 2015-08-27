@@ -87,8 +87,24 @@ class Mage_Catalog_CategoryController extends Mage_Core_Controller_Front_Action
 </frontend>
 ```
 
-* *<use>standard</use>* - use for frontend
-* *<frontName>{front-name}</frontName>* - module controllers url prefix
+##### Example
+
+```xml
+<frontend>
+  <routers>
+    <catalog>
+      <use>standard</use>
+      <args>
+        <module>LZY_Blog</module>
+        <frontName>blog</frontName>
+      </args>
+    </catalog>
+  </routers>
+</frontend>
+```
+
+* `<use>standard</use>` - use for frontend
+* `<frontName>{front-name}</frontName>` - module controllers url prefix
 
 ### Models
 
@@ -102,10 +118,111 @@ class Mage_Catalog_CategoryController extends Mage_Core_Controller_Front_Action
 </models>
 ```
 
+##### Example
+
+```xml
+<models>
+   <lzy_blog>
+      <class>LZY_Blog_Model</class>
+  <lzy_blog>
+</models>
+```
+
 #### Loading
 
-> Mage::getModel('{module}/{model}');
+```php
+Mage::getModel('{module}/{model}');
+```
 
 ##### Example
 
-*Mage::getModel('catalog/product');* = *Mage_Catalog_Model_Product*
+```php
+Mage::getModel('catalog/product') //Mage_Catalog_Model_Product
+```
+
+##### Attributes
+
+```php
+Mage::getModel('catalog/product')->load(27)->getPrice()
+```
+
+### Helpers
+
+Utility methods for common objects and tasks. By default *Data* helper is used.
+
+```php
+$helper = Mage::helper('catalog'); // Mage::helper('catalog/data')
+```
+
+## Observers
+
+Magento applies the event-driven paradigm.
+
+### Syntax
+
+```xml
+<events>
+    <{event-name}>
+        <observers>
+            <{unique_name}>
+                <type>{event-type}</type>
+                <class>{module}/observer</class>
+                <method>{method-name}</method>
+            </{unique_name}>
+        </observers>
+    </{event-name}>
+</events>
+```
+
+### Example
+
+```xml
+<events>
+    <customer_login>
+        <observers>
+            <lzy_login>
+                <type>model</type>
+                <class>blog/observer</class>
+                <method>userLogin</method>
+            </lzy_login>
+        </observers>
+    </customer_login>
+</events>
+```
+
+```php
+class Lzy_Blog_Model_Observer
+{
+    public function userLogin($observer)
+    {
+        $data = $observer->getData();
+    }
+}
+```
+
+## Class overrides
+
+Magento allows you to override class or class method. Calling a model in Magento is using **Mage::getModel()**. This static method implements factory mechanisms.
+
+### Example
+
+```php
+class Lzy_Blog_Model_Product extends Mage_Catalog_Model_Product
+{
+  public function validate()
+  {
+    //add custom validation functionality here
+    return $this;
+  }
+}
+```
+
+```xml
+<models>
+  <catalog>
+    <rewrite>
+      <product>Lzy_Blog_Model_Product</product>
+    </rewrite>
+  </catalog>
+</models>
+```
