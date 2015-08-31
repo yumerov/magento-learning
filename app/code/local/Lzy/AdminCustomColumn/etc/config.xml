@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Lzy_AdminCustomColumn>
+      <version>0.1.0</version>
+    </Lzy_AdminCustomColumn>
+  </modules>
+
+  <global>
+    <blocks>
+      <lzyadmincustomcolumn>
+        <class>Lzy_AdminCustomColumn_Block</class>
+      </lzyadmincustomcolumn>
+
+      <adminhtml>
+        <rewrite>
+        	<catalog_product_grid>Lzy_AdminCustomColumn_Block_Catalog_Product_Grid</catalog_product_grid>
+        </rewrite>
+      </adminhtml>
+    </blocks>
+  </global>
+</config>
