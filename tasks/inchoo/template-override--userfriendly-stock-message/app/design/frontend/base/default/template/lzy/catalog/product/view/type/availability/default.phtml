@@ -1,0 +1,17 @@
+<?php
+/** @var Mage_Catalog_Model_Product */
+$_product = $this->getProduct(); ?>
+<?php if ($this->displayProductStockStatus()): ?>
+    <?php if ($_product->isAvailable()): ?>
+        <p class="availability in-stock">
+            <span class="label"><?php echo $this->helper('catalog')->__('Availability:') ?></span>
+            <span class="value"><?php echo $this->helper('catalog')->__('In stock') ?></span>
+        </p>
+    <?php else: ?>
+        <p class="availability out-of-stock">
+            <strong>
+            <?php echo $this->__('Call for Availability') ?>&nbsp;1-222-333-444
+            </strong>
+        </p>
+    <?php endif; ?>
+<?php endif; ?>
