@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout>
+  <default>
+    <reference name="footer">
+      <block type="customer/form_login" name="customer_form_login" template="customer/form/login.phtml"/>
+    </reference>
+  </default>
+</layout>
