@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Lzy_Config>
+			<version>0.1.0</version>
+		</Lzy_Config>
+	</modules>
+
+	<global>
+		<helpers>
+			<lzyadmin>
+				<class>Lzy_Admin_Helper</class>
+			</lzyadmin>
+		</helpers>
+	</global>
+
+	<admin>
+		<routers>
+			<lzyadmin>
+				<use>admin</use>
+				<args>
+					<module>Lzy_Admin</module>
+					<frontName>lzyadmin</frontName>
+				</args>
+			</lzyadmin>
+		</routers>
+	</admin>
+
+	<adminhtml>
+		<menu>
+				<menu1 translate="title" module="lzyadmin">
+						<title>Lzy main menu item</title>
+						<sort_order>60</sort_order>
+						<children>
+								<menuitem1 module="lzyadmin">
+										<title>Child level 1</title>
+										<action>lzyadmin/admin</action>
+								</menuitem1>
+						</children>
+				</menu1>
+		</menu>
+
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<menu1 translate="title" module="lzyadmin">
+							<title>ActiveCodeline SampleModule1</title>
+							<sort_order>60</sort_order>
+							<menuitem1>
+								<children>
+									<title>Menu item 1</title>
+								</children>
+							</menuitem1>
+					 </menu1>
+				 </children>
+			 </admin>
+		 </resources>
+		</acl>
+	</adminhtml>
+</config>
