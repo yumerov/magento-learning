@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Lzy_Config>
+      <version>0.1.0</version>
+    </Lzy_Config>
+  </modules>
+
+	<global>
+		<helpers>
+			<lzy_config>
+				<class>Lzy_Config_Helper</class>
+			</lzy_config>
+		</helpers>
+	</global>
+
+	<frontend>
+	  <routers>
+	    <lzy_config>
+	      <use>standard</use>
+	      <args>
+	        <module>Lzy_Config</module>
+	        <frontName>lzyconfig</frontName>
+	      </args>
+	    </lzy_config>
+	  </routers>
+	</frontend>
+
+	<adminhtml>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+                    <lzy_config_options translate="title" module="lzy_config" />
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+</config>

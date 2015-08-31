@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<config>
+	<tabs>
+		<lzy_config translate="label" module="lzy_config">
+			<label>Lzy config 123</label><!-- amdin left sidebar tab group name -->
+			<sort_order>100</sort_order>
+		</lzy_config>
+	</tabs>
+	<sections>
+		<lzy_config_options translate="label" module="lzy_config">
+			<label>Lzy Config - One</label><!-- admin leftsidebar tab name -->
+			<tab>lzy_config</tab>
+			<sort_order>130</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<lzyconfigone translate="label">
+					<label>How cool are you?</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<coolnesslevel translate="label"> <!-- path to param value -> lzy_config_options/lzyconfigone/coolnesslevel
+ -->							<label>From 1-10, rate your coolness</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Provide a single number like: 8 or any other that matches your coolness :)</comment>
+						</coolnesslevel>
+					</fields>
+				</lzyconfigone>
+			</groups>
+		</lzy_config_options>
+	</sections>
+</config>
