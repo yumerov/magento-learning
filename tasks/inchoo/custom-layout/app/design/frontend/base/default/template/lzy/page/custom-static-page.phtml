@@ -1,0 +1,70 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<?php echo $this->getChildHtml('after_body_start') ?>
+<div class="wrapper">
+    <?php echo $this->getChildHtml('global_notices') ?>
+    <div class="page">
+        <?php echo $this->getChildHtml('header') ?>
+        <div class="main-container col1-layout">
+            <div class="main">
+                <?php echo $this->getChildHtml('breadcrumbs') ?>
+                <div class="col-main">
+                    <?php echo $this->getChildHtml('global_messages') ?>
+                    <p>
+                    	<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur earum voluptatibus explicabo, accusamus modi, esse ea eum laudantium, ut placeat labore ipsum nobis quas est dolore tenetur itaque cum! Veniam.</span>
+                    	<span>Rem iste sunt in numquam aperiam accusantium voluptatem enim doloribus dolores perspiciatis voluptates, repellat totam, earum maxime inventore esse facilis distinctio eius eos harum impedit laborum nam est? Sapiente, voluptatibus.</span>
+                    	<span>Recusandae ipsam voluptate voluptas mollitia nisi, doloribus saepe, earum tempora, sequi unde atque, dolorum maiores pariatur autem tempore nostrum! Excepturi incidunt tempora aliquam, maxime ab. Expedita, consequuntur qui quae praesentium.</span>
+                    	<span>Commodi incidunt, suscipit corporis sequi laborum impedit facere ducimus reiciendis architecto nam dolores autem doloremque fugiat, rem minima et officia! Iste perferendis, asperiores minus voluptatibus repellendus, ducimus quis voluptas. Sequi?</span>
+                    	<span>Ab iusto libero delectus debitis deserunt, a vero accusantium ullam natus similique placeat neque voluptas est eveniet voluptatibus enim in ea repellendus voluptates sequi consequatur! Nobis et voluptas corporis, dolore.</span>
+                    	<span>Ut placeat, sit rem ipsa blanditiis dolorum omnis repudiandae fuga dicta quasi itaque recusandae nostrum vel esse, numquam, molestiae qui corporis excepturi ducimus! Impedit debitis dolores dolorem quas deleniti, consequuntur.</span>
+                    	<span>Expedita quas eos iusto sapiente eligendi aperiam, esse dolores magni! Incidunt doloribus veniam quam fugit minus, cupiditate reiciendis hic libero dolorem suscipit possimus similique facere laudantium blanditiis cumque officiis quae.</span>
+                    	<span>Praesentium pariatur veniam voluptatem quae quasi hic in illo. Asperiores eius quod, quaerat neque esse dolore dicta fuga est, impedit quos quae nulla nemo, quas officia iste eum similique consequuntur.</span>
+                    	<span>Quaerat harum, officiis, consectetur sapiente voluptate unde nam perspiciatis dolor tempore accusamus sunt porro quo fuga rerum recusandae ipsam iusto nisi voluptatem temporibus, ea dolorum amet aspernatur. Ex, nihil, odit.</span>
+                    	<span>Eius non eaque adipisci voluptas quas ipsam, iste nesciunt temporibus. Excepturi mollitia quas, nulla perferendis illum nobis repudiandae minus dolores porro pariatur autem, expedita corporis quisquam, nesciunt, alias fuga reprehenderit.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <?php echo $this->getChildHtml('footer') ?>
+        <?php echo $this->getChildHtml('global_cookie_notice') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+    </div>
+</div>
+<?php echo $this->getAbsoluteFooter() ?>
+</body>
+</html>

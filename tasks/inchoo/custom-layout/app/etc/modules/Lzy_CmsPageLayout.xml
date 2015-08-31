@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Lzy_CmsPageLayout>
+      <active>true</active>
+      <codePool>local</codePool>
+    </Lzy_CmsPageLayout>
+  </modules>
+</config>

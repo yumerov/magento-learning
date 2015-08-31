@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Lzy_CmsPageLayout>
+      <version>0.1.0</version>
+    </Lzy_CmsPageLayout>
+  </modules>
+
+ <global>
+  <page>
+   <layouts>
+    <lzy_custom_static_page>
+     <label>Lzy custom static page</label>
+     <template>lzy/page/custom-static-page.phtml</template>
+    </lzy_custom_static_page>
+   </layouts>
+  </page>
+ </global>
+</config>
