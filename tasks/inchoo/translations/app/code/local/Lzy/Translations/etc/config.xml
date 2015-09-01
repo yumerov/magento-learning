@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Lzy_Translations>
+      <version>0.1.0</version>
+    </Lzy_Translations>
+  </modules>
+
+  <frontend>
+    <translate>
+      <modules>
+        <Lzy_Translations>
+          <files>
+            <default>Lzy/Translations.csv</default>
+          </files>
+        </Lzy_Translations>
+      </modules>
+    </translate>
+  </frontend>
+</config>
