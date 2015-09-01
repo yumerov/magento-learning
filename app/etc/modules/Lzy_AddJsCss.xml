@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Lzy_AddJsCss>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Lzy_AddJsCss>
+	</modules>
+</config>
