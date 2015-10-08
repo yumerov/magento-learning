@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Lzy_CustomEventObserver>
+      <version>0.0.1</version>
+    </Lzy_CustomEventObserver>
+  </modules>
+
+  <global>
+    <models>
+      <lzy_customeventobserver>
+        <class>Lzy_CustomEventObserver_Model</class>
+      </lzy_customeventobserver>
+    </models>
+
+    <events>
+      <catalog_controller_product_init>
+        <observers>
+          <lzy_customeventobserver_model_observer>
+            <type>singleton</type>
+            <class>Lzy_CustomEventObserver_Model_Observer</class>
+            <method>listen</method>
+          </lzy_customeventobserver_model_observer>
+        </observers>
+      </catalog_controller_product_init>
+    </events>
+  </global>
+</config>
